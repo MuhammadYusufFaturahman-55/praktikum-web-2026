@@ -4,7 +4,7 @@
 Nama         : Muhammad Yusuf Faturahman
 NIM          : 2406002
 Kelas/Prodi  : A - Teknik Informatika 
-Kode MK      : IFRWP5151
+Kode MK      : IFRWP5151 
 
 
 ## Catatan Modul 1 

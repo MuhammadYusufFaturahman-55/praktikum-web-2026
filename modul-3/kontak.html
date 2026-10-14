@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modul 2 Form Kontak</title>
+    <title>Hubungi Saya - Portofolio Mahasiswa</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <header>
         <h1>Formulir Kontak</h1>
         <nav>
@@ -18,21 +20,21 @@
             </ul>
         </nav>
     </header>
-    <hr>
+
     <main>
         <section>
             <h2>Kirimkan Pesan atau Penawaran Proyek</h2>
             <form>
                 <p>
-                    <label for="nama_pengirim">Nama Lengkap Anda:</label><br>
-                    <input type="text" id="nama_pengirim" name="nama_pengirim">
+                    <label for="nama_pengirim">Nama Lengkap Anda:</label>
+                    <input type="text" id="nama_pengirim" name="nama_pengirim" required>
                 </p>
                 <p>
-                    <label for="email_pengirim">Alamat Email:</label><br>
-                    <input type="email" id="email_pengirim" name="email_pengirim">
+                    <label for="email_pengirim">Alamat Email:</label>
+                    <input type="email" id="email_pengirim" name="email_pengirim" required>
                 </p>
                 <p>
-                    <label for="jenis_layanan">Layanan yang Dibutuhkan:</label><br>
+                    <label for="jenis_layanan">Layanan yang Dibutuhkan:</label>
                     <select id="jenis_layanan" name="jenis_layanan">
                         <option value="">-- Pilih Layanan --</option>
                         <option value="web">Pembuatan Web</option>
@@ -41,8 +43,8 @@
                     </select>
                 </p>
                 <p>
-                    <label for="pesan">Pesan: </label><br>
-                    <textarea id="pesan" name="pesan" rows="6" cols="50"></textarea>
+                    <label for="pesan">Pesan:</label>
+                    <textarea id="pesan" name="pesan" rows="6" required></textarea>
                 </p>
                 <p>
                     <button type="submit">Kirim Pesan</button>
@@ -51,9 +53,10 @@
             </form>
         </section>
     </main>
-    <hr>
+
     <footer>
-        <p>&copy; 2026 Teknik Informatika ITG</p>
+        <p>&copy; 2026 Teknik Informatika ITG. All rights reserved.</p>
     </footer>
+
 </body>
 </html>

@@ -10,7 +10,6 @@ body {
 }
 h2 { color: #1d4ed8; margin-bottom: 10px; text-align: center; font-size: 22px; }
 
-/* Styling Fitur 1: Task Counter */
 .task-counter {
     font-size: 13px;
     color: #475569;
@@ -47,7 +46,6 @@ button.add-btn:hover { background-color: #1e40af; }
 .delete-btn { background-color: #dc2626; color: white; }
 .delete-btn:hover { background-color: #b91c1c; }
 
-/* Styling Fitur 2: Tombol Bersihkan */
 .clear-btn {
     width: 100%;
     margin-top: 12px;

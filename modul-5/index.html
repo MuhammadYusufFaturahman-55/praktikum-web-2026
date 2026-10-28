@@ -3,12 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aplikasi To-Do List - Modul 5</title>
+    <title>Aplikasi To-Do List Modul 5</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="todo-app">
         <h2>Daftar Tugas Saya</h2>
+
+        <!-- Task Counter -->
+        <div class="task-counter" id="taskCounter">Total: 0 Tugas | Selesai: 0 | Belum Selesai: 0</div>
 
         <!-- Form Input Tugas -->
         <form id="todoForm" novalidate>
@@ -21,6 +24,9 @@
 
         <!-- Daftar Tugas -->
         <ul class="todo-list" id="todoList"></ul>
+
+        <!-- Tombol Bersihkan Tugas Selesai -->
+        <button id="clearCompletedBtn" class="clear-btn">Bersihkan Tugas Selesai</button>
     </div>
 
     <script src="script.js"></script>

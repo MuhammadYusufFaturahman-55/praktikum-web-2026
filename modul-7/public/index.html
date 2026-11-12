@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manajemen Data Mahasiswa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Manajemen Data Mahasiswa</h2>
+        <p class="subtitle">Sistem CRUD 100% JavaScript: Node.js, Express, Fetch API & MySQL Laragon</p>
+
+        <!-- Form Tambah/Edit Mahasiswa -->
+        <div class="card">
+            <h3 id="formTitle">Tambah Mahasiswa Baru</h3>
+            <form id="mahasiswaForm">
+                <input type="hidden" id="editId">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="nim">NIM *</label>
+                        <input type="text" id="nim" placeholder="Contoh: 240101003" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="nama">Nama Lengkap *</label>
+                        <input type="text" id="nama" placeholder="Nama mahasiswa" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="jurusan">Program Studi *</label>
+                        <select id="jurusan" required>
+                            <option value="">-- Pilih Jurusan --</option>
+                            <option value="Teknik Informatika">Teknik Informatika</option>
+                            <option value="Sistem Informasi">Sistem Informasi</option>
+                            <option value="Teknik Industri">Teknik Industri</option>
+                            <option value="Teknik Sipil">Teknik Sipil</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" placeholder="nama@kampus.ac.id" required>
+                    </div>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" id="btnSubmit" class="btn btn-primary">Simpan Mahasiswa</button>
+                    <button type="button" id="btnCancel" class="btn btn-secondary" style="display: none;">Batal</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- FITUR 1 & FITUR 3: Search Input & Indikator Counter Total -->
+        <div class="table-header-tools">
+            <div class="counter-badge">
+                Total Mahasiswa Terdaftar: <strong id="totalMahasiswa">0</strong> Orang
+            </div>
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Cari nama atau NIM...">
+            </div>
+        </div>
+
+        <!-- Tabel Data Mahasiswa -->
+        <div class="card table-card">
+            <table>
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>NIM</th>
+                        <th>Nama Lengkap</th>
+                        <th>Jurusan</th>
+                        <th>Email</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+                <tbody id="mahasiswaTableBody">
+                    <!-- Data ditarik dari backend -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

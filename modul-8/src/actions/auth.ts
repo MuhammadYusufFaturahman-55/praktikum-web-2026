@@ -8,11 +8,12 @@ import { redirect } from "next/navigation";
 
 export async function registerAction(formData: FormData) {
   const name = formData.get("name") as string;
+  const nim = (formData.get("nim") as string) || null;
   const email = formData.get("email") as string;
   const password = formData.get("password") as string;
 
   if (!name || !email || !password) {
-    throw new Error("Semua kolom wajib diisi.");
+    throw new Error("Nama, email, dan password wajib diisi.");
   }
 
   const existingUser = await prisma.user.findUnique({
@@ -28,6 +29,7 @@ export async function registerAction(formData: FormData) {
   await prisma.user.create({
     data: {
       name,
+      nim,
       email,
       password: hashedPassword,
     },
@@ -61,6 +63,7 @@ export async function loginAction(formData: FormData) {
   const sessionData = {
     id: user.id,
     name: user.name,
+    nim: user.nim ?? "-",
     email: user.email,
     role: user.role ?? "MAHASISWA",
     loginAt: new Date().toISOString(),
@@ -72,7 +75,7 @@ export async function loginAction(formData: FormData) {
     secure: process.env.NODE_ENV === "production",
     sameSite: "lax",
     path: "/",
-    maxAge: 60 * 60 * 24, // 1 hari
+    maxAge: 60 * 60 * 24,
   });
 
   redirect("/dashboard");

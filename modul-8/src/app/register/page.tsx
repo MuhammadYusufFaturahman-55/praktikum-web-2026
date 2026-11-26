@@ -1,3 +1,4 @@
+// File: src/app/register/page.tsx
 import Link from "next/link";
 import { registerAction } from "@/actions/auth";
 
@@ -26,6 +27,18 @@ export default function RegisterPage() {
 
           <div>
             <label className="block text-sm font-medium text-slate-700 mb-1">
+              NIM (Nomor Induk Mahasiswa)
+            </label>
+            <input
+              type="text"
+              name="nim"
+              placeholder="Contoh: 2406002 (Opsional)"
+              className="w-full px-3 py-2 border border-slate-300 rounded-lg text-slate-900"
+            />
+          </div>
+
+          <div>
+            <label className="block text-sm font-medium text-slate-700 mb-1">
               Alamat Email
             </label>
             <input
@@ -45,6 +58,7 @@ export default function RegisterPage() {
               type="password"
               name="password"
               required
+              minLength={6}
               placeholder="Minimal 6 karakter"
               className="w-full px-3 py-2 border border-slate-300 rounded-lg text-slate-900"
             />
